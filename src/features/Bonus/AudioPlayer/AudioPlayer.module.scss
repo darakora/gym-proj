@@ -1,0 +1,21 @@
+.audio_container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .player {
+    border-radius: 200px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .audio_container {
+    .player {
+      max-width: 320px;
+    }
+  }
+}

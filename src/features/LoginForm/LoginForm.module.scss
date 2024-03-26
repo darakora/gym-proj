@@ -1,0 +1,137 @@
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 210px;
+  gap: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  input {
+    border-radius: 5px;
+  }
+}
+
+input.email-input::placeholder {
+  font-size: 13px;
+  color: #adbad7;
+}
+
+input.password-input::placeholder {
+  font-size: 13px;
+  color: #adbad7;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 10px;
+  .login-btn {
+    font-family: 'Rubik';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    width: 360px;
+    height: 45px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 750px) {
+      width: 342px;
+    }
+    @media (min-width: 260px) and (max-width: 330px) {
+      width: 260px;
+    }
+    @media (max-width: 260px) {
+      width: 178px;
+    }
+  }
+
+  .reset-password-btn {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--secondary);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+.error {
+  color: #de1818;
+  font-size: 14px;
+  margin: 0;
+}
+
+.title-login {
+  color: var(--primary-grey);
+  display: flex;
+  flex-flow: column;
+  span:first-child {
+    font-family: 'Dancing Script';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  span:last-child {
+    font-family: 'AC Line';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 750px) {
+  .title-login {
+    span:first-child {
+      font-size: 35px;
+    }
+    span:last-child {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 260px) and (max-width: 330px) {
+  input.email-input,
+  input.password-input {
+    width: 175px;
+  }
+  .title-login {
+    span:first-child {
+      font-size: 25px;
+    }
+    span:last-child {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 260px) {
+  input.email-input,
+  input.password-input {
+    width: 90px;
+  }
+  .title-login {
+    span:first-child {
+      font-size: 20px;
+    }
+    span:last-child {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  height: 100%;
+}
+.pop_up_form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+  .input_container {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      &::after {
+        content: '*';
+        margin-left: 4px;
+        color: #de1818;
+      }
+    }
+  }
+  .subject_input {
+    height: 11px;
+  }
+  .message_input {
+    margin-top: 5px;
+    height: 61px;
+    padding: 20px 64px 20px 20px;
+    resize: none;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  span {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: -15px;
+  }
+  .form_btn {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.error {
+  color: #de1818;
+  font-size: 14px;
+  margin: 0;
+}
+
+.checkMark {
+  svg {
+    width: 150px;
+    height: 150px;
+  }
+}

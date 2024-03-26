@@ -1,0 +1,99 @@
+.container {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 870px;
+  gap: 20px;
+  h5 {
+    font-family: Rubik;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 auto;
+    align-self: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .video_container {
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        .tab {
+          display: flex;
+          width: 30%;
+          max-width: 145px;
+          height: 45px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px 5px 0px 0px;
+          border: 1px solid #000;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border-bottom: none;
+          white-space: inherit;
+        }
+        .active {
+          border-bottom: 1px solid #fff;
+          top: 1px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+.animationContainer {
+  position: relative;
+  margin-left: 30%;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    margin-top: 30px;
+    h5 {
+      text-align: center;
+    }
+    .content {
+      .video_container {
+        .tabs {
+          justify-content: start;
+          .tab {
+            width: 30%;
+          }
+          .active {
+            color: #fff;
+            background-color: var(--primary-grey);
+            border-bottom: none;
+          }
+        }
+        .player_container {
+          padding: 0;
+          border: none;
+          height: 205px;
+          .player {
+            border-radius: 0px 5px 5px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabsContainer {
+  padding: 30px;
+  border-radius: 5px;
+  border-top-right-radius: unset;
+  border-top-left-radius: unset;
+  border: 1px solid #1f2c4a;
+  background: #fff;
+  height: 480px;
+  overflow-y: scroll;
+}

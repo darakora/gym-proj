@@ -1,0 +1,98 @@
+.container {
+  max-width: calc(930px / 1400px) * 100%;
+  button {
+    font-family: 'Rubik';
+  }
+  h1 {
+    font-family: 'AC Line';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--primary-grey);
+    margin: 60px 0 40px 0;
+    text-align: left;
+    margin-top: 100px;
+  }
+  .tabs {
+    display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    .tab {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      padding: 10px 5px;
+      border-bottom: 2px solid var(--primary-grey);
+      border-radius: 0px;
+      justify-content: center;
+      flex: 1;
+      &:last-child {
+        flex: 0;
+      }
+    }
+    .active {
+      color: var(--secondary);
+      border-bottom: 3px solid var(--secondary);
+    }
+  }
+  .planned {
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .container {
+    margin-top: 80px;
+    max-width: 100%;
+    h1 {
+      display: none;
+    }
+
+    .tabs {
+      flex-wrap: wrap;
+      .tab {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        &:last-child {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .container {
+    .tabs {
+      flex-wrap: wrap;
+      .tab {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    .tabs {
+      .tab {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    .tabs {
+      .tab {
+        font-size: 16px;
+      }
+    }
+  }
+}

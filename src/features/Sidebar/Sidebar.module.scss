@@ -1,0 +1,53 @@
+.container {
+  max-width: 280px;
+  width: 100%;
+  margin-top: 170px;
+  .accordion {
+    display: inline;
+  }
+  .title_container {
+    display: block;
+    .title {
+      display: flex;
+      flex-direction: column;
+      color: var(--primary-grey);
+      font-family: 'AC Line';
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      span {
+        font-family: Dancing Script;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    max-width: inherit;
+    margin-top: 80px;
+    .accordion {
+      display: none;
+    }
+    .title_container {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .container {
+    .sidebar_btn {
+      padding: 10px;
+    }
+  }
+}

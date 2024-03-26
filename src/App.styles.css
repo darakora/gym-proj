@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Exo+2:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'AC Line';
+  src: url('/public/fonts/ACLineRegular.eot') format('eot'),
+    url('/public/fonts/ACLineRegular.woff') format('woff'),
+    url('/public/fonts/ACLineRegular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --background-color: #fff;
+  --primary: #d3f0f0;
+  --primary-light: #a3d7d7;
+  --secondary: #ce3591;
+  --primary-grey: #1f2c4a;
+  --pink-light: #e884c1;
+  --grey-light: #4a5877;
+  --pink-pale: #fde1f2;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Rubik;
+  margin: 0;
+  hyphens: auto;
+}
+.image-style-side {
+  float: right;
+}
+.image {
+  text-align: center;
+}

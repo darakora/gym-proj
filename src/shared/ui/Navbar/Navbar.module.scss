@@ -1,0 +1,32 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  left: 0;
+  top: 0;
+  .link {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    color: #e1e1e1;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    .home {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      stroke: currentColor;
+    }
+    &.active {
+      color: var(--primary-light);
+    }
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 8px;
+    }
+  }
+}

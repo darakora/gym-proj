@@ -1,0 +1,63 @@
+.pageloader-enter {
+  opacity: 0;
+}
+
+.pageloader-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-out;
+}
+
+.pageloader-exit {
+  opacity: 1;
+}
+
+.pageloader-exit-active {
+  opacity: 0;
+  transition: opacity 100ms ease-out;
+}
+
+.pageloader-exit {
+  opacity: 1;
+}
+
+.pageloader-exit-active {
+  opacity: 0;
+  transition: opacity 100ms ease-out;
+}
+
+.loader {
+  background-image: url(/src/assets/backgrounds/Animation1.svg);
+  background-size: cover;
+  background-position: center;
+  animation: imageAnimation 3s infinite;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+@keyframes imageAnimation {
+  0% {
+    background-image: url(/src/assets/backgrounds/Animation1.svg);
+  }
+  50% {
+    background-image: url(/src/assets/backgrounds/Animation2.svg);
+  }
+  100% {
+    background-image: url(/src/assets/backgrounds/Animation3.svg);
+  }
+}
+
+@media (min-width: 750px) {
+  .pageloader {
+    display: none;
+  }
+}
+
+@media (min-height: 600px) and (max-width: 450px) {
+  .loader {
+    background-size: contain;
+  }
+}

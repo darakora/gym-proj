@@ -1,0 +1,43 @@
+.container {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 870px;
+  gap: 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title {
+      h2 {
+        font-size: 24px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      align-self: center;
+    }
+  }
+}
+
+.animationContainer {
+  position: relative;
+  margin-left: 30%;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    margin-top: 30px;
+    h5 {
+      text-align: center;
+    }
+    .content {
+      p {
+        font-size: 18px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

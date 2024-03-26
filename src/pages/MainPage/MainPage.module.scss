@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: var(--primary-grey);
+  margin-top: 170px;
+  .refetch_button {
+    width: 100%;
+    max-width: 160px;
+    height: 42px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  .error_text {
+    align-self: center;
+  }
+}
+.content_container {
+  display: flex;
+  gap: 20px;
+  .content {
+    .video {
+      width: 100%;
+      max-width: 380px;
+      height: 220px;
+      float: right;
+      border-radius: 5px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2%;
+      .player {
+        width: 100%;
+        height: 100%;
+        iframe {
+          width: 100% !important;
+          height: 100% !important;
+          div {
+            --color-two: #ce3591;
+          }
+        }
+      }
+      .play:hover {
+        width: 30%;
+        height: 30%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    margin-top: 50px;
+    .content_container {
+      flex-direction: column;
+      gap: 40px;
+      .content {
+        gap: 20px;
+        .video {
+          width: 100%;
+          height: 205px;
+          max-width: none;
+        }
+      }
+    }
+  }
+}

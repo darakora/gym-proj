@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 100%;
+  flex-flow: column;
+  margin-bottom: 110px;
+  font-family: 'Rubik';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(18.2px / 14px) * 100%;
+  color: var(--primary-grey);
+  .plannedContainer {
+    border: 1px solid var(--primary-grey);
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #fff;
+  }
+  .plannedInner {
+    display: flex;
+    gap: 20px;
+    .dateMobile {
+      display: none;
+    }
+    .plannedContent {
+      display: flex;
+      flex-flow: column;
+      gap: 20px;
+      flex: 1;
+      :nth-child(1) {
+        align-content: flex-start;
+      }
+      :nth-child(3) {
+        display: flex;
+        justify-content: space-between;
+        gap: 1%;
+        .btnEvent {
+          justify-content: center;
+          padding: 15px 40px;
+          font-family: inherit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          max-width: 228px;
+        }
+      }
+    }
+  }
+}
+
+.dateDesktop {
+  display: flex;
+  flex-flow: column;
+  align-self: self-end;
+  font-size: 12px;
+  color: var(--primary-light);
+  line-height: calc(18.2px / 14px) * 100%;
+}
+
+@media (max-width: 820px) {
+  .container .plannedInner .dateMobile {
+    display: block;
+    align-self: center;
+    font-size: 12px;
+    color: var(--primary-light);
+    line-height: calc(18.2px / 14px) * 100%;
+  }
+  .dateDesktop {
+    display: none;
+  }
+  .notificationsContainer {
+    display: flex;
+    gap: 20px;
+    div {
+      align-self: center;
+    }
+  }
+  .container .plannedInner {
+    flex-flow: column;
+    .plannedContent :nth-child(3) .btnEvent {
+      width: 100%;
+      display: block;
+      font-size: 16px;
+      max-width: 100%;
+      width: sds;
+    }
+  }
+}

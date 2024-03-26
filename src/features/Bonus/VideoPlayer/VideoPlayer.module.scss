@@ -1,0 +1,65 @@
+.player_container {
+  padding: 30px;
+  border-radius: 5px;
+  border-top-right-radius: unset;
+  border-top-left-radius: unset;
+  border: 1px solid #1f2c4a;
+  background: #fff;
+  height: 480px;
+  .player {
+    width: 100%;
+    max-width: 810px;
+    height: 100%;
+    max-height: 480px;
+    border-radius: 5px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    iframe {
+      width: 100% !important;
+      height: 100% !important;
+      div {
+        --color-two: #ce3591;
+      }
+    }
+    .play {
+      width: 80px;
+      height: 80px;
+      &:hover {
+        width: 20%;
+        height: 20%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .player_container {
+    height: 440px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .player_container {
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .player_container {
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .player_container {
+    padding: 0;
+    border: none;
+    height: 205px;
+    .player {
+      border-top-right-radius: unset;
+      border-top-left-radius: unset;
+    }
+  }
+}

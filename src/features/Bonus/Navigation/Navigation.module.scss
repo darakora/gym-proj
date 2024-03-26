@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  .navigation_button {
+    color: var(--primary-grey);
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 8px;
+    width: 98px;
+    white-space: normal;
+    text-align: left;
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+    &:disabled {
+      color: #e1e1e1;
+    }
+    .icon {
+      stroke: currentColor;
+    }
+  }
+}

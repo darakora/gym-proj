@@ -1,0 +1,130 @@
+.popup_overflow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  .container {
+    padding: 30px;
+    min-height: 215px;
+    width: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--primary-grey);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 130%;
+    .error {
+      color: #de1818;
+      font-size: 14px;
+      margin: 0;
+    }
+    .close_button {
+      margin-bottom: 20px;
+      align-self: flex-end;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-family: Rubik;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      span {
+        color: var(--secondary);
+      }
+    }
+    .buttons_container {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      .ok_button,
+      .cancel_button {
+        color: #fff;
+        padding: 15px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .ok_button {
+        max-width: 100px;
+      }
+      .cancel_button {
+        max-width: 130px;
+        background-color: var(--primary-grey);
+      }
+    }
+  }
+  .markContainer {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+}
+.popup_overflow_hidden {
+  display: none;
+}
+
+.checkMark {
+  svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .popup_overflow {
+    .container {
+      width: 90%;
+      max-width: 295px;
+      gap: 15px;
+      h1 {
+        display: inline;
+        font-size: 24px;
+      }
+      .buttons_container {
+        margin-top: 15px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .popup_overflow {
+    .container {
+      width: 60%;
+      .buttons_container {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        .ok_button {
+          max-width: inherit;
+        }
+        .cancel_button {
+          max-width: inherit;
+        }
+      }
+    }
+  }
+}

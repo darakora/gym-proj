@@ -1,0 +1,161 @@
+.habitTracker {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  background-color: #ffffff;
+  border: 1px solid var(--primary-grey);
+  border-radius: 5px;
+  padding: 20px 40px;
+  width: fit-content;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  .daysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 15px);
+    column-gap: 20px;
+    justify-content: end;
+    margin-right: 40px;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #1f2c4a;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.habitRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.habitNameContainer {
+  flex: 1;
+  color: #1f2c4a;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.habitName {
+  font-weight: 400;
+  color: var(--primary-grey);
+}
+
+.checkboxContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 15px);
+  column-gap: 20px;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+input[type='checkbox'] {
+  transform: scale(1.8);
+}
+
+.dayName {
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dayNameContainer {
+  display: flex;
+}
+
+.saSo {
+  color: var(--secondary);
+}
+
+.counterContainer {
+  width: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.counter {
+  color: var(--primary-light);
+  width: 20px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 920px) and ((min-width: 751px)) {
+  .habitTracker {
+    padding: 10px 10px;
+    gap: 10px;
+    .daysContainer {
+      margin-right: 27px;
+      column-gap: 10px;
+      align-items: end;
+      div {
+        margin-right: 9px;
+        &:last-child {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+  input[type='checkbox'] {
+    transform: scale(1.2);
+  }
+  .habitRow {
+    gap: 10px;
+  }
+  .checkboxContainer {
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .habitTracker {
+    flex-direction: column-reverse;
+    transform: rotate(90deg);
+    margin-top: 90px;
+    margin-bottom: 70px;
+    gap: 20px;
+    height: 260px;
+    justify-content: center;
+    padding: 10px 20px;
+    .daysContainer {
+      grid-template-columns: repeat(7, auto);
+      column-gap: 19px;
+      margin-right: 25px;
+      align-items: end;
+    }
+  }
+  .dayName {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .habitNameContainer {
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+  .counter {
+    transform: rotate(270deg);
+  }
+  input[type='checkbox'] {
+    transform: rotate(270deg) scale(1.8);
+  }
+  .habitRow {
+    gap: 10px;
+  }
+}

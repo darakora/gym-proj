@@ -1,0 +1,41 @@
+.container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  margin: auto;
+  background: url('../../assets/logoMain.svg') repeat-y;
+  background-size: 100% auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.inner {
+  display: flex;
+  gap: 5%;
+  position: relative;
+}
+
+@media only screen and (max-width: 1280px) {
+  main {
+    margin: 0 10%;
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  main {
+    background: url('../../assets/logoMainMobile.svg') repeat-y;
+    margin: 0 5%;
+  }
+  .inner {
+    flex-flow: column;
+  }
+}

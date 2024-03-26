@@ -1,0 +1,50 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid var(--primary);
+}
+.container {
+  min-height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  position: sticky;
+  background-color: #fff;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.btn_container {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  .buttons {
+    height: 16px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+.wrapper {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 0 10%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .container {
+    flex-flow: column;
+    align-items: center;
+    svg {
+      padding-top: 40px;
+    }
+  }
+  .btn_container {
+    display: none;
+  }
+}

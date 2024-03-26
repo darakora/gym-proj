@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+.card {
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-grey);
+  padding: 30px 30px 0 30px;
+}
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.info {
+  display: flex;
+  gap: 40px;
+  height: 219px;
+  .image {
+    align-self: flex-end;
+  }
+  .text_info {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    .text {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      margin: 0;
+    }
+    .subscribe_btn {
+      background-color: var(--primary-grey);
+      display: flex;
+      width: 228px;
+      height: 52px;
+      padding: 15px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: flex-end;
+      margin-top: 20px;
+      a {
+        font-family: Rubik;
+        text-decoration: unset;
+        color: white;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+  }
+}
+.cancel_container {
+  .cancel_btn {
+    font-family: 'Montserrat';
+    display: flex;
+    padding: 15px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    max-width: 240px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  p {
+    background-color: rgba($color: rgb(248, 248, 37), $alpha: 0.5);
+    color: #de1818;
+    max-width: 305px;
+    padding: 10px;
+    a {
+      color: var(--secondary);
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    gap: 20px;
+    .card {
+      max-width: -webkit-fill-available;
+      height: 203px;
+      padding: 20px 15px 0 15px;
+    }
+    .info {
+      height: 173px;
+      gap: 2.5rem;
+    }
+    .text_info {
+      order: 1;
+      .subscribe_btn {
+        margin-top: 10px;
+        align-self: baseline;
+        max-width: 178px;
+      }
+    }
+    .image {
+      order: 2;
+      width: 105px;
+      height: 96px;
+    }
+  }
+  .cancel_btn {
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .container {
+    height: 330px;
+    .card {
+      height: 100%;
+    }
+  }
+}

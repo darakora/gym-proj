@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+  padding-top: 130px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    flex-flow: column;
+    align-items: stretch;
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  label {
+    color: var(--primary-grey);
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    font-family: 'Rubik';
+  }
+
+  label:has(+ input:required)::after {
+    content: '*';
+    display: inline-block;
+    padding-left: 4px;
+    color: var(--secondary);
+  }
+
+  input {
+    height: 3px;
+    appearance: none;
+    display: block;
+    padding: 20px 64px 20px 20px;
+    border-radius: 3px;
+    border: 1px solid var(--primary-grey);
+    font-family: Rubik;
+    margin: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    &[data-valid='false'] {
+      border-color: var(--secondary);
+    }
+    &::placeholder {
+      font-size: 13px;
+      color: #adbad7;
+    }
+  }
+}
+
+.error {
+  color: var(--secondary);
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.password_check {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    margin-right: 8px;
+    background: inherit;
+  }
+  &.light {
+    color: #de1818;
+    &:before {
+      background: #de1818;
+    }
+  }
+  &.medium {
+    color: #f9b508;
+    &:before {
+      background: #f9b508;
+    }
+  }
+  &.high {
+    color: #93cc27;
+    &:before {
+      background: #93cc27;
+    }
+  }
+}

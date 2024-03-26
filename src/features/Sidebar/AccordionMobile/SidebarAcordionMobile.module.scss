@@ -1,0 +1,87 @@
+.accordion_container_mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .accordion_container_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    .accordion_content_hidden {
+      padding: 15px 18px;
+      margin-top: -26px;
+      transition: margin-top 0.4s;
+      border: 1px solid var(--primary-grey);
+      border-radius: 0px 0px 5px 5px;
+      border-top: unset;
+      padding: 15px 10px 10px 10px;
+    }
+    .accordion_content {
+      margin-top: -5px;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0px 0px 5px 5px;
+      border: 1px solid var(--primary-grey);
+      border-top: none;
+      background: #f5fdfd;
+      gap: 5px;
+      padding: 15px 10px 10px 10px;
+      .content_item {
+        margin: 0;
+        border-radius: 5px;
+        border: 1px solid #e1e1e1;
+        background: #e1e1e1;
+        color: #4a5877;
+        font-family: Rubik;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 18px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background: #fff;
+        &:focus {
+          border-color: var(--secondary);
+        }
+      }
+    }
+    .accordion_btn {
+      background-color: var(--primary);
+      color: #000;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      height: 45px;
+      padding: 0px 18px;
+      border: 1px solid var(--primary-grey);
+      border-radius: 5px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      position: relative;
+      p {
+        margin: 0;
+      }
+      .empty {
+        flex: 1;
+      }
+      .switch_icon {
+        rotate: 0deg;
+        transition: rotate 0.3s;
+      }
+      &[aria-expanded='true'] {
+        height: 40px;
+        border-radius: 5px 5px 0px 0px;
+        .switch_icon {
+          rotate: 90deg;
+          transition: rotate 0.3s;
+        }
+      }
+    }
+  }
+}
